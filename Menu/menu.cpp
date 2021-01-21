@@ -57,16 +57,16 @@ void Menu::addItem(std::string title,void(*funcPtr)()) {
 void Menu::printMenu() {
 
     // Initialize option
-    int option = 0;
+    int option = 1;
 
     // Print menu header if supplied
     if (hasHeader) std::cout << header << "\n" << std::endl;
 
     // Enumerate in print options
-    for (int i = 0; i < menuItems.size(); i++) std::cout << i << ".) " << menuItems[i]->getTitle() << std::endl;
+    for (int i = 1; i < menuItems.size(); i++) std::cout << i << ".) " << menuItems[i]->getTitle() << std::endl;
 
 
-    // Prompt user for selection
+    // Prompt user for se1ection
     std::cout << "\nSelect option: ";
     std::cin >> option;
 

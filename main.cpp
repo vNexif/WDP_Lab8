@@ -14,45 +14,52 @@
 #include "Zadania/Zadanie88.h"
 
 void globalCallback(int option) {
-    std::cout << "Global Callback | Selection: " << option << std::endl;
+    std::cout << "Global Callback | Zadanie : " << option << std::endl;
+}
+
+void blankiBoi() {
+    std::cerr << "I'm blank :)" << std::endl;
+    exit(0);
 }
 
 void zadanie1() {
-    std::cout << "You've selected random fill" << std::endl;
+    std::cout << "Zadanie 1" << std::endl;
     zadanie81();
 }
 
 void zadanie2() {
-    std::cout << "Item Callback | Selected option 1" << std::endl;
+    std::cout << "Zadanie 2" << std::endl;
     zadanie82();
 }
 
 void zadanie3() {
-    std::cout << "Item Callback | Selected option 2" << std::endl;
+    std::cout << "Zadanie 3" << std::endl;
     zadanie83();
 }
 
 void zadanie4() {
-    std::cout << "Item Callback | Selected option 2" << std::endl;
+    std::cout << "Zadanie 4" << std::endl;
     zadanie84();
 }
 
 void zadanie5(){
-    std::cout << "Item Callback | Selected option %%" << std::endl;
-
+    std::cout << "Zadanie 5" << std::endl;
+    zadanie85();
 }
 
 void zadanie6(){
-    std::cout << "Item Callback | Selected option %%" << std::endl;
+    std::cout << "Zadanie 6" << std::endl;
+    zadanie86();
 }
 
 void zadanie7(){
-    std::cout << "Item Callback | Selected option %%" << std::endl;
+    std::cout << "Zadanie 7" << std::endl;
+    zadanie87();
 }
 
 void zadanie8(){
-    std::cout << "Item Callback | Selected option %%" << std::endl;
-
+    std::cout << "Zadanie 8" << std::endl;
+    zadanie88();
 }
 
 int main(int argc, const char * argv[]) {
@@ -61,6 +68,7 @@ int main(int argc, const char * argv[]) {
     // Menu with header and global callbacks
     Menu zadania("Select task:", &globalCallback);
 
+    zadania.addItem("Blank", &blankiBoi);
     zadania.addItem("Zadanie 1", &zadanie1);
     zadania.addItem("Zadanie 2", &zadanie2); // You can have global callback and individual callbacks
     zadania.addItem("Zadanie 3", &zadanie3);

@@ -9,15 +9,14 @@
 class zadanie82 : protected Randomizer{
 private:
     int_fast32_t sum{0};
-public:
-    zadanie82();
-    void randomize();
-
-    void showRandom();
 
     void calcSum();
 
     void showSum();
+
+public:
+    zadanie82();
+
 };
 
 #endif //LAB_8_ZADANIE82_H

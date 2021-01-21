@@ -8,10 +8,9 @@
 
 class zadanie83 : protected Randomizer{
 private:
-    int_fast32_t evenNumbSum{};
+    int_fast32_t evenNumbCount{0};
 
     void findEven();
-    void sumEven(int_fast32_t x);
 
 public:
     zadanie83();

@@ -4,21 +4,6 @@
 
 #include "Zadanie82.h"
 
-void zadanie82::randomize() {
-    Randomizer::generateRandom();
-}
-
-void zadanie82::showRandom() {
-    for(int i = 0; i < this -> n; i++)
-    {
-        for(int j = 0; j < this -> m; j++)
-        {
-            std::cout << this -> vec[i][j] << " ";
-        }
-        std::cout<< std::endl;
-    }
-}
-
 void zadanie82::calcSum() {
     for (int i = 0; i < this -> n; ++i) {
         for (int j = 0; j < this -> m; ++j) {
@@ -32,8 +17,8 @@ void zadanie82::showSum(){
 }
 
 zadanie82::zadanie82() {
-    zadanie82::randomize();
-    zadanie82::showRandom();
+    Randomizer::generateRandom();
+    Randomizer::showVector();
     zadanie82::calcSum();
     zadanie82::showSum();
 }
